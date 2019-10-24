@@ -1,5 +1,5 @@
 ---
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: demochat-master
@@ -15,7 +15,7 @@ spec:
         service: app
     spec:
       containers:
-      - image: verchol/demochat:{{CF_BRANCH}}
+      - image: containers101/demochat:{{CF_BRANCH}}
         name: app
         imagePullPolicy: Always
         ports:
